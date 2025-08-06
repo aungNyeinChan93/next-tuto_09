@@ -9,7 +9,7 @@ const UsersPage = async () => {
   // addUser();
 
   const users = await getUsers();
-  console.log(users);
+  // console.log(users);
 
   return (
     <React.Fragment>

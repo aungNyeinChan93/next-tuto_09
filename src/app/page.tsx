@@ -1,6 +1,6 @@
 import path from "path";
 import url from "url";
-import { getUsers } from "../utils/server-utils";
+// import { getUsers } from "../utils/server-utils";
 import App from "./(myapp)/page";
 
 const Index = async () => {
@@ -9,8 +9,8 @@ const Index = async () => {
   );
   console.log(absolutePath);
 
-  const users = await getUsers();
-  console.log(users);
+  // const users = await getUsers();
+  // console.log(users);
 
   return (
     <>

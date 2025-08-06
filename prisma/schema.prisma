@@ -15,4 +15,39 @@ model User {
   id    Int    @id @default(autoincrement())
   name  String
   email String @unique
+  Post  Post[]
+}
+
+model Movie {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  releaseDate DateTime
+  rating      Float?
+  genre       String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Post {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  comments    Comment[]
+  user        User      @relation(fields: [userId], references: [id])
+  userId      Int
+}
+
+model Comment {
+  id     Int  @id @default(autoincrement())
+  Post   Post @relation(fields: [postId], references: [id])
+  postId Int
+}
+
+model Todo {
+  id        Int       @id @default(autoincrement())
+  task      String
+  completed Boolean?  @default(false)
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 }
