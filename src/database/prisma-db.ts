@@ -69,7 +69,11 @@ export const createTodo = async (task: string) => {
 
 // get all todos
 export const getAllTodos = async () => {
-    const todos = await prisma.todo.findMany();
+    const todos = await prisma.todo.findMany({
+        orderBy: {
+            id: 'desc'
+        }
+    });
     return todos
 }
 

@@ -23,7 +23,7 @@ const TodosPage = async () => {
       </h1>
       <section className="flex justify-center p-4">
         <form
-          className="py-3 px-10 rounded-2xl bg-green-200 w-[400px] flex items-center gap-4"
+          className="py-3 px-10 rounded-2xl bg-green-200 w-full  sm:w-[400px] flex flex-col sm:flex-row  items-center gap-4"
           action={handleCreateTodo}
         >
           <input
@@ -31,7 +31,7 @@ const TodosPage = async () => {
             name="task"
             id="Task"
             placeholder="Enter Task Here"
-            className="p-2 border border-green-300 rounded-2xl"
+            className="p-2 border border-green-300 rounded-2xl w-full"
             required
             aria-label="Task"
           />

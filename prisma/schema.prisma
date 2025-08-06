@@ -19,14 +19,15 @@ model User {
 }
 
 model Movie {
-  id          Int      @id @default(autoincrement())
+  id          String    @id @default(uuid())
   name        String
   description String
-  releaseDate DateTime
-  rating      Float?
   genre       String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  image       String?
+  releaseDate DateTime?
+  rating      Float?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 model Post {
