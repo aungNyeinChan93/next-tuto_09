@@ -77,20 +77,20 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/todos"
                     className="hover:text-blue-700 text-slate-900 block font-medium text-[15px]"
                   >
-                    Feature
-                  </a>
+                    Todos
+                  </Link>
                 </li>
                 <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/movies"
                     className="hover:text-blue-700 text-slate-900 block font-medium text-[15px]"
                   >
-                    Blog
-                  </a>
+                    Movies
+                  </Link>
                 </li>
                 <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
                   <a
