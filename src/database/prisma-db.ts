@@ -47,13 +47,13 @@ export const createMovie = async () => {
     console.log(movie);
 };
 
-// type Todo = {
-//     id: number,
-//     task: string,
-//     completed: boolean,
-//     createdAt: string | null,
-//     updateAt: string | null
-// }
+export type Todo = {
+    id: number,
+    task: string,
+    completed: boolean,
+    createdAt?: string | null,
+    updateAt?: string | null
+}
 
 //  create todo
 
@@ -72,3 +72,4 @@ export const getAllTodos = async () => {
     const todos = await prisma.todo.findMany();
     return todos
 }
+
